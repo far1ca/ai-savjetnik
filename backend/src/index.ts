@@ -28,7 +28,7 @@ const ChatRequestSchema = z.object({
 app.post("/api/chat", async (req, res) => {
   const parsed = ChatRequestSchema.safeParse(req.body);
   if (!parsed.success) {
-    return res.status(400).json({ error: "Invalid request body" });
+    return res.status(400).json({ error: "Neispravan zahtjev" });
   }
 
   try {
@@ -60,5 +60,5 @@ app.post("/api/chat", async (req, res) => {
 
 app.listen(env.PORT, () => {
   // eslint-disable-next-line no-console
-  console.log(`Backend listening on http://localhost:${env.PORT}`);
+  console.log(`Backend pokrenut na http://localhost:${env.PORT}`);
 });

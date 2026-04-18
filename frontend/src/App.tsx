@@ -85,7 +85,7 @@ export function App() {
           id: uuid(),
           role: "assistant",
           content:
-            "Problem sa `VITE_API_BASE`",
+            "Nisam mogao dosegnuti backend. Provjerite da li je backend pokrenut.",
         },
       ]);
     } finally {

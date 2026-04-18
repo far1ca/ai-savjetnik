@@ -41,7 +41,7 @@ export async function hfChatCompletion(params: {
     try {
       json = text ? (JSON.parse(text) as HFChatCompletionResponse) : undefined;
     } catch {
-      // ignore JSON parse error; we will throw a better error below
+      // ignorisi parse error; bacit ćemo bolji error ispod
     }
 
     if (!res.ok) {
@@ -53,7 +53,7 @@ export async function hfChatCompletion(params: {
     }
 
     const content = json?.choices?.[0]?.message?.content?.trim();
-    if (!content) throw new Error("Empty model response");
+    if (!content) throw new Error("Prazan odgovor modela");
     return { content };
   } finally {
     clearTimeout(timeout);
