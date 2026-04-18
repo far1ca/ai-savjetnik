@@ -29,8 +29,7 @@ function renderMessageContent(content: string): React.ReactNode {
 }
 
 function getApiBase(): string {
-  const v = import.meta.env.VITE_API_BASE as string | undefined;
-  return (v && v.trim()) || "http://localhost:8787";
+  return "https://ai-savjetnik.onrender.com";
 }
 
 export function App() {
@@ -86,7 +85,7 @@ export function App() {
           id: uuid(),
           role: "assistant",
           content:
-            "I couldn’t reach the backend. Make sure the backend is running and your `VITE_API_BASE` is correct.",
+            "Problem sa `VITE_API_BASE`",
         },
       ]);
     } finally {
